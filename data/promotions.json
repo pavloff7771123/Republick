@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "title": "Скидка 20% на десерты",
+        "description": "Каждый понедельник с 12:00 до 18:00 скидка на все десерты!",
+        "image": "images/promo-dessert.jpg",
+        "validUntil": "31.12.2025"
+    },
+    {
+        "id": 2,
+        "title": "Живая музыка",
+        "description": "Каждую пятницу с 19:00 наслаждайтесь живой музыкой!",
+        "image": "images/promo-music.jpg",
+        "validUntil": "31.12.2025"
+    }
+]
