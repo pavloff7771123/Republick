@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Репаблик - Ресторан в Казани</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="#hero" class="logo" aria-label="Репаблик Лого">
+                <img src="images/Rep.png" alt="Репаблик Лого" class="logo-img" onerror="this.src='https://via.placeholder.com/150x50?text=Logo';">
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#hero">Главная</a></li>
+                    <li><a href="#menu-section">Меню</a></li>
+                    <li><a href="#promotions">Акции</a></li>
+                    <li><a href="#about-us">О нас</a></li>
+                    <li><a href="#booking">Бронирование</a></li>
+                    <li><a href="#reviews">Отзывы</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>
+            </nav>
+            <div>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Переключить тему">
+                    <span class="theme-icon">🌙</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section id="hero" class="hero-section">
+        <div class="container">
+            <h1>Добро пожаловать в Репаблик!</h1>
+            <p>Изысканная кухня и уютная атмосфера в самом сердце Казани.</p>
+            <a href="#booking" class="btn">Забронировать столик</a>
+        </div>
+    </section>
+
+    <section id="menu-section" class="menu-section">
+        <div class="container">
+            <h2>Наше Меню</h2>
+            <label for="menu-search-input" class="visually-hidden">Поиск блюд</label>
+            <div class="menu-search">
+                <input type="text" id="menu-search-input" placeholder="Поиск по названию или описанию..." aria-label="Поиск блюд">
+            </div>
+            <div class="menu-filters">
+                <label for="price-filter">Макс. цена:</label>
+                <input type="range" id="price-filter" min="0" max="2500" value="2500">
+                <span id="price-value">2500 ₽</span>
+            </div>
+            <div class="menu-categories"></div>
+            <div class="menu-items-grid"></div>
+        </div>
+    </section>
+
+    <section id="popular" class="popular-section">
+        <div class="container">
+            <h2>Популярные блюда</h2>
+            <div class="popular-grid"></div>
+        </div>
+    </section>
+
+    <section id="favorites" class="favorites-section">
+        <div class="container">
+            <h2>Избранное</h2>
+            <div class="favorites-grid"></div>
+        </div>
+    </section>
+
+    <section id="promotions" class="promotions-section">
+        <div class="container">
+            <h2>Акции и события</h2>
+            <div class="promotions-grid"></div>
+        </div>
+    </section>
+
+    <section id="about-us" class="about-us-section">
+        <div class="container">
+            <h2>О нас</h2>
+            <p>Репаблик — это место, где гастрономия встречается с уютом. Мы предлагаем блюда, приготовленные из свежих и качественных ингредиентов.</p>
+            <ul>
+                <li>Уникальное меню, вдохновлённое мировой кухней.</li>
+                <li>Тёплая атмосфера для семейных ужинов и встреч с друзьями.</li>
+                <li>Расположение в центре Казани: ул. Баумана, 82.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="booking" class="booking-section">
+        <div class="container">
+            <h2>Бронирование</h2>
+            <form id="booking-form" aria-label="Форма бронирования столика">
+                <label for="booking-name">Ваше имя:</label>
+                <input type="text" id="booking-name" name="name" required>
+                <label for="booking-phone">Телефон:</label>
+                <input type="tel" id="booking-phone" name="phone" required>
+                <label for="booking-date">Дата:</label>
+                <input type="date" id="booking-date" name="date" required>
+                <label for="booking-time">Время:</label>
+                <input type="time" id="booking-time" name="time" step="1800" min="12:00" max="22:00" required>
+                <label for="booking-guests">Количество гостей:</label>
+                <input type="number" id="booking-guests" name="guests" min="1" max="10" required>
+                <button type="submit" class="btn" id="booking-submit">Забронировать</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="reviews" class="reviews-section">
+        <div class="container">
+            <h2>Отзывы</h2>
+            <div class="reviews-grid">
+                <div class="review">
+                    <p>"Великолепная еда и обслуживание! Стейк был приготовлен идеально."</p>
+                    <p>— Анна, 15.05.2025</p>
+                </div>
+                <div class="review">
+                    <p>"Уютная атмосфера, отличное место для ужина с семьёй."</p>
+                    <p>— Иван, 10.04.2025</p>
+                </div>
+                <div class="review">
+                    <p>"Тирамису — лучший десерт, который я пробовал!"</p>
+                    <p>— Мария, 01.06.2025</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacts" class="contacts-section">
+        <div class="container">
+            <h2>Контакты</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <p><strong>Адрес:</strong> ул. Баумана, 82, Казань</p>
+                    <p><strong>Телефон:</strong> +7 (843) 123-45-67</p>
+                    <p><strong>Электронная почта:</strong> info@republic.kz</p>
+                    <p><strong>Часы работы:</strong> Ежедневно с 12:00 до 22:00</p>
+                </div>
+                <form id="contact-form" aria-label="Форма обратной связи">
+                    <label for="contact-name">Ваше имя:</label>
+                    <input type="text" id="contact-name" name="name" required>
+                    <label for="contact-email">Электронная почта:</label>
+                    <input type="email" id="contact-email" name="email" required>
+                    <label for="contact-message">Сообщение:</label>
+                    <textarea id="contact-message" name="message" required></textarea>
+                    <button type="submit" class="btn" id="contact-submit">Отправить</button>
+                </form>
+            </div>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.408013287888!2d49.12187931595747!3d55.78867298056329!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x415ead3b8c77b5b7%3A0x9e7f3b8f7c8f6b4!2z0YPQuy4g0JHQsNC10LzQsNC90LAsIDgyLCDQmtCw0LfQsNC90YwsINCg0LXRgNC00LjQutC-0LLQsNGA0YHQsNC50L3QsCwgNDIwMTEx!5e0!3m2!1sru!2sru!4v1698765432109" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" aria-label="Карта расположения ресторана"></iframe>            </div>            </div>
+        </div>
+    </section>
+
+    <div id="modal" class="modal" aria-hidden="true">
+        <div class="modal-content">
+            <span class="modal-close" aria-label="Закрыть модальное окно">×</span>
+            <p id="modal-message"></p>
+        </div>
+    </div>
+
+    <div id="dish-modal" class="modal dish-modal" aria-hidden="true">
+        <div class="modal-content dish-modal-content">
+            <span class="modal-close" aria-label="Закрыть модальное окно">×</span>
+            <img id="dish-modal-image" src="" alt="">
+            <h3 id="dish-modal-name"></h3>
+            <p id="dish-modal-description"></p>
+            <p id="dish-modal-price"></p>
+            <h4>Состав:</h4>
+            <ul id="dish-modal-ingredients"></ul>
+            <p id="dish-modal-calories"></p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Репаблик. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
